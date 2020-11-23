@@ -41,6 +41,10 @@ class ViewController: UIViewController {
     @IBAction func buttons(_ sender: UIButton) {
         
         if oper == true {
+            button_plus.isEnabled = true
+            button_multiply.isEnabled = true
+            button_divide.isEnabled = true
+            button_minus.isEnabled = true
             display.text = String(sender.tag)
             oper = false
         }
@@ -59,18 +63,34 @@ class ViewController: UIViewController {
             if sender.tag == 12 {
                 //plus
                 display.text = "+"
+                button_plus.isEnabled = false
+                button_multiply.isEnabled = false
+                button_divide.isEnabled = false
+                button_minus.isEnabled = false
             }
             else if sender.tag == 13 {
                 //multiply
                 display.text = "*"
+                button_plus.isEnabled = false
+                button_multiply.isEnabled = false
+                button_divide.isEnabled = false
+                button_minus.isEnabled = false
             }
             else if sender.tag == 14 {
                 //divide
                 display.text = "/"
+                button_plus.isEnabled = false
+                button_multiply.isEnabled = false
+                button_divide.isEnabled = false
+                button_minus.isEnabled = false
             }
             else if sender.tag == 15 {
                 //minus
                 display.text = "-"
+                button_plus.isEnabled = false
+                button_multiply.isEnabled = false
+                button_divide.isEnabled = false
+                button_minus.isEnabled = false
             }
             to_work = sender.tag
             oper = true
